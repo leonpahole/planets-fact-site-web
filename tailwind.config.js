@@ -11,8 +11,21 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["var(--font-antonio)", ...fontFamily.sans],
+        alt: ["var(--font-league-spartan)", ...fontFamily.sans],
       },
       fontSize: {
+        logo: [
+          pxToRem(28),
+          { lineHeight: pxToRem(36), letterSpacing: pxToRem(-1.05) },
+        ],
+        nav: [
+          pxToRem(15),
+          {
+            lineHeight: pxToRem(25),
+            letterSpacing: pxToRem(1.36),
+            fontWeight: 700,
+          },
+        ],
         h1: [pxToRem(80), pxToRem(104)],
         h2: [
           pxToRem(40),
@@ -64,6 +77,26 @@ module.exports = {
         blue: {
           100: "#2D68F0",
         },
+      },
+      height: {
+        4.25: pxToRem(17),
+      },
+      maxWidth: {
+        275: pxToRem(1110),
+      },
+      padding: {
+        5.5: pxToRem(22),
+        6.75: pxToRem(27),
+      },
+      gap: {
+        8.25: pxToRem(33),
+        9.75: pxToRem(39),
+      },
+      backgroundImage: {
+        stars: "url('/images/background-stars.svg')",
+      },
+      spacing: {
+        17.25: pxToRem(69),
       },
     },
   },
