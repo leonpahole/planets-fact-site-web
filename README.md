@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: TBD
-- Live Site URL: TBD
+- Solution URL: [https://github.com/leonpahole/planets-fact-site-web](https://github.com/leonpahole/planets-fact-site-web)
+- Live Site URL: [https://planets-fact-site-web.vercel.app/](https://planets-fact-site-web.vercel.app/)
 
 ## My process
 
