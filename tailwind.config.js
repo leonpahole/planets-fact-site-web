@@ -87,6 +87,7 @@ module.exports = {
       padding: {
         5.5: pxToRem(22),
         6.75: pxToRem(27),
+        7.25: pxToRem(29),
       },
       gap: {
         8.25: pxToRem(33),
