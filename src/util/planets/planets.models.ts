@@ -84,4 +84,31 @@ export namespace PlanetsModels {
   export const isValidContent = (content: string) => {
     return Content.some((c) => c.href === content);
   };
+
+  export const PlanetNotFound: Planet = {
+    name: "Planet 404",
+    color: "black",
+    relativeSize: 0.8,
+    geology: {
+      content: "This planet has unknown geology.",
+      source: "https://en.wikipedia.org/wiki/HTTP_404",
+    },
+    overview: {
+      content: "This planet has not been discovered yet.",
+      source: "https://en.wikipedia.org/wiki/HTTP_404",
+    },
+    structure: {
+      content: "This planet has unknown structure.",
+      source: "https://en.wikipedia.org/wiki/HTTP_404",
+    },
+    rotation: "???",
+    radius: "???",
+    temperature: "???",
+    revolution: "???",
+    images: {
+      geology: "",
+      internal: "",
+      planet: "",
+    },
+  };
 }

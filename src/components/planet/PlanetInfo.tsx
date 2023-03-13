@@ -1,9 +1,9 @@
 import { SourceIcon } from "@/components/icon/SourceIcon";
+import { usePlanetContent } from "@/components/planet/usePlanetContent";
 import { usePlanetContentLinks } from "@/components/planet/usePlanetContentLinks";
 import { LinkGroup } from "@/components/shared/LinkGroup";
 import { PlanetsModels } from "@/util/planets/planets.models";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 interface IProps {
   planet: PlanetsModels.Planet;
@@ -12,8 +12,7 @@ interface IProps {
 export const PlanetInfo = ({ planet }: IProps) => {
   const contentLinks = usePlanetContentLinks(planet);
 
-  const router = useRouter();
-  const { property } = router.query;
+  const type = usePlanetContent();
 
   const PropertyMap: Record<
     PlanetsModels.ContentType,
@@ -24,7 +23,7 @@ export const PlanetInfo = ({ planet }: IProps) => {
     "internal-structure": "structure",
   };
 
-  const content = planet[PropertyMap[property as PlanetsModels.ContentType]];
+  const content = planet[PropertyMap[type]];
 
   return (
     <>
