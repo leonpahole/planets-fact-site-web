@@ -13,11 +13,21 @@ interface IProps {
 export const MobileNavbar = ({ planets }: IProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  const toggle = () => {
+    if (isOpen) {
+      document.body.classList.remove("overflow-hidden");
+    } else {
+      document.body.classList.add("overflow-hidden");
+    }
+
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className="flex flex-wrap items-center justify-between gap-9.75 border-b border-b-white border-opacity-20 py-4 px-6 text-white md:hidden">
       <h1 className="flex-shrink-0 text-logo uppercase">The planets</h1>
       <nav>
-        <button onClick={() => setIsOpen((o) => !o)} type="button">
+        <button onClick={toggle} type="button">
           <HamburgerIcon
             className={`${
               isOpen ? "opacity-25" : "opacity-100"
