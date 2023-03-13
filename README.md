@@ -32,7 +32,10 @@ Users should be able to:
 
 ### Built with
 
-- TBD
+- Next.js
+- TypeScript
+- Tailwind
+- Strapi
 
 ## Author
 
