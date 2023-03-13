@@ -1,3 +1,5 @@
+import { getStrapiMedia } from "@/util/strapi";
+
 export namespace PlanetsModels {
   export interface Planet {
     name: string;
@@ -25,6 +27,39 @@ export namespace PlanetsModels {
       geology: string;
     };
   }
+
+  export const fromPlanetDtos = ({ data }: any): Planet[] => {
+    return data.map(fromPlanetDto);
+  };
+
+  export const fromPlanetDto = ({ attributes }: any): Planet => {
+    return {
+      name: attributes.name,
+      color: attributes.color,
+      relativeSize: attributes.relativeSize,
+      rotation: attributes.rotation,
+      revolution: attributes.revolution,
+      radius: attributes.radius,
+      temperature: attributes.temperature,
+      geology: {
+        content: attributes.geology.content,
+        source: attributes.geology.source,
+      },
+      overview: {
+        content: attributes.overview.content,
+        source: attributes.overview.source,
+      },
+      structure: {
+        content: attributes.structure.content,
+        source: attributes.structure.source,
+      },
+      images: {
+        geology: getStrapiMedia(attributes.geologyImage),
+        internal: getStrapiMedia(attributes.internalImage),
+        planet: getStrapiMedia(attributes.planetImage),
+      },
+    };
+  };
 
   export type ContentType =
     | "overview"
