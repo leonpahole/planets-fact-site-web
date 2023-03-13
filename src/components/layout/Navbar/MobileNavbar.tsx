@@ -34,7 +34,7 @@ export const MobileNavbar = ({ planets }: IProps) => {
         </button>
 
         <ul
-          className={`fixed top-17.25 left-0 bottom-0 z-20 flex w-screen flex-col bg-gray-700 p-6 transition-transform ${
+          className={`fixed top-17.25 left-0 bottom-0 z-20 flex w-screen flex-col overflow-auto bg-gray-700 p-6 transition-transform ${
             isOpen ? "" : "translate-x-full"
           }`}
         >
