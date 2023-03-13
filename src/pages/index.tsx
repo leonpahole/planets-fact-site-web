@@ -2,13 +2,20 @@ import { PlanetsService } from "@/util/planets/planets.service";
 import { GetServerSideProps } from "next";
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const planets = await PlanetsService.list();
-  return {
-    redirect: {
-      destination: PlanetsService.getLink(planets[0], "overview"),
-      permanent: true,
-    },
-  };
+  try {
+    const planets = await PlanetsService.list();
+    return {
+      redirect: {
+        destination: PlanetsService.getLink(planets[0], "overview"),
+        permanent: true,
+      },
+    };
+  } catch (e) {
+    console.error(e);
+    return {
+      notFound: true,
+    };
+  }
 };
 
 export default function Home() {
