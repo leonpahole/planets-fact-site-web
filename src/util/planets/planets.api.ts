@@ -2,7 +2,7 @@ const planets = [
   {
     name: "Mercury",
     color: "#419EBB",
-    relativeSize: 1,
+    relativeSize: 0.6,
     overview: {
       content:
         "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.",
@@ -24,15 +24,15 @@ const planets = [
     radius: "2,439.7 KM",
     temperature: "430°c",
     images: {
-      planet: "./assets/planet-mercury.svg",
-      internal: "./assets/planet-mercury-internal.svg",
-      geology: "./assets/geology-mercury.png",
+      planet: "/images/planet-mercury.svg",
+      internal: "/images/planet-mercury-internal.svg",
+      geology: "/images/geology-mercury.png",
     },
   },
   {
     name: "Venus",
     color: "#EDA249",
-    relativeSize: 2,
+    relativeSize: 0.8,
     overview: {
       content:
         "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty. As the brightest natural object in Earth's night sky after the Moon, Venus can cast shadows and can be, on rare occasions, visible to the naked eye in broad daylight.",
@@ -53,15 +53,15 @@ const planets = [
     radius: "6,051.8 KM",
     temperature: "471°c",
     images: {
-      planet: "./assets/planet-venus.svg",
-      internal: "./assets/planet-venus-internal.svg",
-      geology: "./assets/geology-venus.png",
+      planet: "/images/planet-venus.svg",
+      internal: "/images/planet-venus-internal.svg",
+      geology: "/images/geology-venus.png",
     },
   },
   {
     name: "Earth",
     color: "#6D2ED5",
-    relativeSize: 3,
+    relativeSize: 0.3,
     overview: {
       content:
         "Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth's surface is land with remaining 70.8% is covered with water. Earth's distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.",
@@ -82,14 +82,14 @@ const planets = [
     radius: "6,371 KM",
     temperature: "16°c",
     images: {
-      planet: "./assets/planet-earth.svg",
-      internal: "./assets/planet-earth-internal.svg",
-      geology: "./assets/geology-earth.png",
+      planet: "/images/planet-earth.svg",
+      internal: "/images/planet-earth-internal.svg",
+      geology: "/images/geology-earth.png",
     },
   },
   {
     name: "Mars",
-    relativeSize: 3.2,
+    relativeSize: 0.4,
     color: "#D14C32",
     overview: {
       content:
@@ -111,14 +111,14 @@ const planets = [
     radius: "3,389.5 KM",
     temperature: "-28°c",
     images: {
-      planet: "./assets/planet-mars.svg",
-      internal: "./assets/planet-mars-internal.svg",
-      geology: "./assets/geology-mars.png",
+      planet: "/images/planet-mars.svg",
+      internal: "/images/planet-mars-internal.svg",
+      geology: "/images/geology-mars.png",
     },
   },
   {
     name: "Jupiter",
-    relativeSize: 20,
+    relativeSize: 1,
     color: "#D83A34",
     overview: {
       content:
@@ -141,14 +141,14 @@ const planets = [
     radius: "69,911 KM",
     temperature: "-108°c",
     images: {
-      planet: "./assets/planet-jupiter.svg",
-      internal: "./assets/planet-jupiter-internal.svg",
-      geology: "./assets/geology-jupiter.png",
+      planet: "/images/planet-jupiter.svg",
+      internal: "/images/planet-jupiter-internal.svg",
+      geology: "/images/geology-jupiter.png",
     },
   },
   {
     name: "Saturn",
-    relativeSize: 17,
+    relativeSize: 0.9,
     color: "#CD5120",
     overview: {
       content:
@@ -170,14 +170,14 @@ const planets = [
     radius: "58,232 KM",
     temperature: "-138°c",
     images: {
-      planet: "./assets/planet-saturn.svg",
-      internal: "./assets/planet-saturn-internal.svg",
-      geology: "./assets/geology-saturn.png",
+      planet: "/images/planet-saturn.svg",
+      internal: "/images/planet-saturn-internal.svg",
+      geology: "/images/geology-saturn.png",
     },
   },
   {
     name: "Uranus",
-    relativeSize: 10,
+    relativeSize: 0.8,
     color: "#1EC1A2",
     overview: {
       content:
@@ -199,14 +199,14 @@ const planets = [
     radius: "25,362 KM",
     temperature: "-195°c",
     images: {
-      planet: "./assets/planet-uranus.svg",
-      internal: "./assets/planet-uranus-internal.svg",
-      geology: "./assets/geology-uranus.png",
+      planet: "/images/planet-uranus.svg",
+      internal: "/images/planet-uranus-internal.svg",
+      geology: "/images/geology-uranus.png",
     },
   },
   {
     name: "Neptune",
-    relativeSize: 10,
+    relativeSize: 0.8,
     color: "#2D68F0",
     overview: {
       content:
@@ -228,9 +228,9 @@ const planets = [
     radius: "24,622 KM",
     temperature: "-201°c",
     images: {
-      planet: "./assets/planet-neptune.svg",
-      internal: "./assets/planet-neptune-internal.svg",
-      geology: "./assets/geology-neptune.png",
+      planet: "/images/planet-neptune.svg",
+      internal: "/images/planet-neptune-internal.svg",
+      geology: "/images/geology-neptune.png",
     },
   },
 ];

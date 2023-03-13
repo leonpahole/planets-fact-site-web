@@ -12,7 +12,10 @@ export namespace PlanetsService {
     return PlanetsApi.get(name);
   };
 
-  export const getLink = (planet: PlanetsModels.Planet): string => {
-    return `/planet/${planet.name.toLowerCase()}`;
+  export const getLink = (
+    planet: PlanetsModels.Planet,
+    content: PlanetsModels.ContentType
+  ): string => {
+    return `/planet/${planet.name.toLowerCase()}/${content}`;
   };
 }

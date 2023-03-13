@@ -9,7 +9,7 @@ interface IProps {
 
 export const DesktopNavbar = ({ planets }: IProps) => {
   return (
-    <header className="hidden flex-col flex-wrap items-center justify-center gap-9.75 border-b border-b-white border-opacity-20 pr-10 pl-8 text-white md:flex lg:flex-row lg:justify-between">
+    <header className="hidden flex-col flex-wrap items-center justify-center gap-2.5 border-b border-b-white border-opacity-20 pt-8 pr-10 pl-8 text-white md:flex lg:flex-row lg:justify-between lg:gap-9.75 lg:pt-0">
       <h1 className="flex-shrink-0 text-logo uppercase">The planets</h1>
       <nav>
         <ul className="flex flex-wrap justify-center gap-8.25">
@@ -32,9 +32,9 @@ const DesktopNavbarLink = ({ planet }: { planet: PlanetsModels.Planet }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <Link
-        className="block border-t-4 pt-7.25 pb-6.75 font-alt text-h4 uppercase opacity-75 hover:opacity-100"
+        className="block border-t-0 pt-7.25 pb-6.75 font-alt text-h4 uppercase opacity-75 hover:opacity-100 lg:border-t-4"
         style={{ borderColor: isHovered ? planet.color : "transparent" }}
-        href={PlanetsService.getLink(planet)}
+        href={PlanetsService.getLink(planet, "overview")}
       >
         {planet.name}
       </Link>
