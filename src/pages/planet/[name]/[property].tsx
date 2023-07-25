@@ -2,7 +2,7 @@ import { NavbarLayout } from "@/components/layout/NavbarLayout";
 import { Planet } from "@/components/planet/Planet";
 import { PlanetsModels } from "@/util/planets/planets.models";
 import { PlanetsService } from "@/util/planets/planets.service";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 import Head from "next/head";
 
 interface IProps {
@@ -10,20 +10,9 @@ interface IProps {
   planets: PlanetsModels.Planet[];
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const planets = await PlanetsService.list();
-
-  return {
-    paths: planets.flatMap((planet) =>
-      PlanetsModels.Content.map((c) => ({
-        params: { property: c.href, name: planet.name.toLowerCase() },
-      }))
-    ),
-    fallback: false,
-  };
-};
-
-export const getStaticProps: GetStaticProps<IProps> = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps<IProps> = async ({
+  params,
+}) => {
   const planet = await PlanetsService.get(params!.name as string);
   const planets = await PlanetsService.list();
 
