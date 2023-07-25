@@ -10,8 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-antonio)", ...fontFamily.sans],
-        alt: ["var(--font-league-spartan)", ...fontFamily.sans],
+        sans: ["Antonio", ...fontFamily.sans],
+        alt: ["League Spartan", ...fontFamily.sans],
       },
       fontSize: {
         logo: [
